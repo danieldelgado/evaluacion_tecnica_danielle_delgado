@@ -1,0 +1,23 @@
+<p>
+  Actualizar Tipo de Cambio
+</p>
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Seleccionar tipo de cambio</label>
+    <select formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }">
+      <option *ngFor="let item of listTipoCambio" value="{{item.id}}">{{item.origin}} a {{item.exchange}}</option>
+    </select>
+    <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+      <div *ngIf="f.id.errors.required">Tipo de cambio es requerido</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Nuevo valor de tipo de cambio</label>
+    <input type="text" formControlName="typeExchange" class="form-control"
+      [ngClass]="{ 'is-invalid': submitted && f.typeExchange.errors }" />
+    <div *ngIf="submitted && f.typeExchange.errors" class="invalid-feedback">
+      <div *ngIf="f.typeExchange.errors.required">Last Name is required</div>
+    </div>
+  </div>
+</form>

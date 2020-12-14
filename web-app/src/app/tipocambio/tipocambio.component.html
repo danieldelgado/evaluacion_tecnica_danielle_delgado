@@ -1,0 +1,47 @@
+<div>
+  <p>
+    Ingrese el monto :
+  </p>
+  <input (change)="ingresandoMonto($event)">
+</div>
+
+<div class="container">
+  <h3>Lista de tipos de cambios y resultados de los calculos</h3>
+  <table>
+    <thead>
+      <th>Identificador</th>
+      <th>Origen</th>
+      <th>Monto Origen</th>
+      <th>Destino</th>
+      <th>Tipo de cambio</th>
+      <th>Resultado</th>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let row of listTipoCambio">
+        <td>
+          {{row.id}}
+        </td>
+        <td>
+          {{row.origin}}
+        </td>
+        <td>
+          {{row.mountorigin}}
+        </td>
+        <td>
+          {{row.exchange}}
+        </td>
+        <td>
+          {{row.typeExchange}}
+        </td>
+        <td>
+          {{row.exchangeAmount}}
+        </td>
+      </tr>
+
+    </tbody>
+
+
+
+  </table>
+</div>

@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "3e4c527d-e6d6-44f3-89bf-7c95f6a08795",
+		"name": "bcp_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "project_pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "bct_test_client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "read write",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "email@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login docker con otro ip",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "project_pass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "bct_test_client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "read write",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "email@email.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.99.100:8081/oauth/token",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"100"
+					],
+					"port": "8081",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get tipos de camios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImVtYWlsQGVtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDc5NDUzNzUsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJ1c2VybmFtZSI6ImVtYWlsQGVtYWlsLmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiOThjMDE0YzEtYjZkNi00MWQzLWEzNjItNDY0ODFhZDQ3NGI4IiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.qNVwIx25xQsIQbRtYcUG7Bj2iPIeTt5yTAinl8VTKBo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/exchange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get currency",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImVtYWlsQGVtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDc5NDUzNzUsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJ1c2VybmFtZSI6ImVtYWlsQGVtYWlsLmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiOThjMDE0YzEtYjZkNi00MWQzLWEzNjItNDY0ODFhZDQ3NGI4IiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.qNVwIx25xQsIQbRtYcUG7Bj2iPIeTt5yTAinl8VTKBo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/currency",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"currency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exchange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImVtYWlsQGVtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDc5NDUzNzUsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJ1c2VybmFtZSI6ImVtYWlsQGVtYWlsLmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiOThjMDE0YzEtYjZkNi00MWQzLWEzNjItNDY0ODFhZDQ3NGI4IiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.qNVwIx25xQsIQbRtYcUG7Bj2iPIeTt5yTAinl8VTKBo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"originCurrencyId\":\"2\",\r\n    \"exchangeCurrencyId\":\"1\",\r\n    \"amount\":100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/exchange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update exchange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImVtYWlsQGVtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDc5NDUzNzUsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJ1c2VybmFtZSI6ImVtYWlsQGVtYWlsLmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiOThjMDE0YzEtYjZkNi00MWQzLWEzNjItNDY0ODFhZDQ3NGI4IiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.qNVwIx25xQsIQbRtYcUG7Bj2iPIeTt5yTAinl8VTKBo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\",\r\n    \"typeExchange\":4.2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/exchange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
