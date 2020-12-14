@@ -40,12 +40,12 @@
 						},
 						{
 							"key": "username",
-							"value": "email@email.com",
+							"value": "usuario01@bcptest.com",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "password",
+							"value": "pass1234",
 							"type": "text"
 						}
 					],
@@ -105,12 +105,12 @@
 						},
 						{
 							"key": "username",
-							"value": "email@email.com",
+							"value": "usuario01@bcptest.com",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "password",
+							"value": "pass1234",
 							"type": "text"
 						}
 					],
@@ -121,7 +121,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://192.168.99.100:8081/oauth/token",
+					"raw": "http://192.168.99.100:8082/oauth/token",
 					"protocol": "http",
 					"host": [
 						"192",
@@ -129,7 +129,7 @@
 						"99",
 						"100"
 					],
-					"port": "8081",
+					"port": "8082",
 					"path": [
 						"oauth",
 						"token"
@@ -146,7 +146,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImVtYWlsQGVtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDc5NDUzNzUsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJ1c2VybmFtZSI6ImVtYWlsQGVtYWlsLmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiOThjMDE0YzEtYjZkNi00MWQzLWEzNjItNDY0ODFhZDQ3NGI4IiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.qNVwIx25xQsIQbRtYcUG7Bj2iPIeTt5yTAinl8VTKBo",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDgwMTE3MTYsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJ1c3VhcmlvMDFAYmNwdGVzdC5jb20iLCJ1c2VybmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNmU2YzIwZDktMDU5YS00NTM3LWFiMGUtMjk1M2NhMjE3NTAxIiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.ep609eg3XKAygVDeuvkUfmDmIpMNReJ0tCWthBzaWfk",
 							"type": "string"
 						}
 					]
@@ -169,7 +169,7 @@
 			"response": []
 		},
 		{
-			"name": "get currency",
+			"name": "get tipos de camios Copy",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -177,6 +177,39 @@
 						{
 							"key": "token",
 							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6ImVtYWlsQGVtYWlsLmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDc5NDUzNzUsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJlbWFpbEBlbWFpbC5jb20iLCJ1c2VybmFtZSI6ImVtYWlsQGVtYWlsLmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiOThjMDE0YzEtYjZkNi00MWQzLWEzNjItNDY0ODFhZDQ3NGI4IiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.qNVwIx25xQsIQbRtYcUG7Bj2iPIeTt5yTAinl8VTKBo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.99.100:8082/api/exchange",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"100"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get currency",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDgwMTE3MTYsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJ1c3VhcmlvMDFAYmNwdGVzdC5jb20iLCJ1c2VybmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNmU2YzIwZDktMDU5YS00NTM3LWFiMGUtMjk1M2NhMjE3NTAxIiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.ep609eg3XKAygVDeuvkUfmDmIpMNReJ0tCWthBzaWfk",
 							"type": "string"
 						}
 					]
@@ -200,6 +233,87 @@
 		},
 		{
 			"name": "exchange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDgwMTE3MTYsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJ1c3VhcmlvMDFAYmNwdGVzdC5jb20iLCJ1c2VybmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNmU2YzIwZDktMDU5YS00NTM3LWFiMGUtMjk1M2NhMjE3NTAxIiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.ep609eg3XKAygVDeuvkUfmDmIpMNReJ0tCWthBzaWfk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"originCurrencyId\":\"1\",\r\n    \"exchangeCurrencyId\":\"4\",\r\n    \"amount\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/exchange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exchange Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDgwMTIzNjIsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJ1c3VhcmlvMDFAYmNwdGVzdC5jb20iLCJ1c2VybmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMzQ4ZWVmYjUtOGFlMy00YjBiLWFmN2MtMjNiYjM5MmI5ZDQzIiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.CzBMZk6fGVnynSihngkgTrAajipvJS8za6NC5Sp4aqI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"originCurrencyId\":\"1\",\r\n    \"exchangeCurrencyId\":\"4\",\r\n    \"amount\":10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.99.100:8082/api/exchange",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"100"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exchange Copy",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -232,6 +346,89 @@
 					"path": [
 						"api",
 						"exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exchange list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDgwMTE3MTYsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJ1c3VhcmlvMDFAYmNwdGVzdC5jb20iLCJ1c2VybmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNmU2YzIwZDktMDU5YS00NTM3LWFiMGUtMjk1M2NhMjE3NTAxIiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.ep609eg3XKAygVDeuvkUfmDmIpMNReJ0tCWthBzaWfk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"origin\": \"USD\",\r\n        \"exchange\": \"EUR\",\r\n        \"typeExchange\": 5.5\r\n    },\r\n    {\r\n        \"origin\": \"YEN\",\r\n        \"exchange\": \"PEN\",\r\n        \"typeExchange\": 500\r\n    },\r\n    {\r\n        \"origin\": \"PEN\",\r\n        \"exchange\": \"YEN\",\r\n        \"typeExchange\": 2\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/exchange/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"exchange",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exchange list Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLXJlc291cmNlIl0sInVzZXJfbmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE2MDgwMTIzNjIsInVzZXIiOnsiY3JlYXRlZCI6MSwiYWN0aXZlIjoxLCJpZCI6MSwiZW1haWwiOiJ1c3VhcmlvMDFAYmNwdGVzdC5jb20iLCJ1c2VybmFtZSI6InVzdWFyaW8wMUBiY3B0ZXN0LmNvbSJ9LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiMzQ4ZWVmYjUtOGFlMy00YjBiLWFmN2MtMjNiYjM5MmI5ZDQzIiwiY2xpZW50X2lkIjoiYmN0X3Rlc3RfY2xpZW50In0.CzBMZk6fGVnynSihngkgTrAajipvJS8za6NC5Sp4aqI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"origin\": \"YEN\",\r\n        \"exchange\": \"PEN\",\r\n        \"typeExchange\": 500\r\n    },\r\n    {\r\n        \"origin\": \"PEN\",\r\n        \"exchange\": \"YEN\",\r\n        \"typeExchange\": 2\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.99.100:8082/api/exchange/list",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"100"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"exchange",
+						"list"
 					]
 				}
 			},
